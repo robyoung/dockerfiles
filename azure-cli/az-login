@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+sudo -u docker docker run \
+  -v /var/run/docker.sock:/var/run/docker.sock \
+  -v ${HOME}/.azure:/root/.azure \
+  -v ${HOME}/.docker:/root/.docker \
+  azure-cli \
+  az login
