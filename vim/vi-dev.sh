@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+id
+
 set -x
 
 sudo -u docker \
@@ -8,7 +10,7 @@ sudo -u docker \
         -u robyoung \
         -e VIM_EXTRA_PLUGINS=1 \
         -e VIMHOME=${HOME}/.vim \
-        -e FZF_DEFAULT_COMMAND='rg -u --files' \
+        -e FZF_DEFAULT_COMMAND='rg --files' \
         -w ${PWD} \
         -v ${HOME}/${DEV_DIR}:${HOME}/${DEV_DIR} \
         -v ${HOME}/dev-vim:${HOME}/.vim \
